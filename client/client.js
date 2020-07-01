@@ -7,7 +7,8 @@ const loadingElement = document.querySelector('.loading');
 const API_URL = 'http://localhost:5000/thoughts';
 const thoughtsElement = document.querySelector('.thoughts');
 
-loadingElement.style.display = '';
+
+    loadingElement.style.display = '';
 
 listAllThoughts();
 
@@ -36,7 +37,8 @@ form.addEventListener('submit', (event) => {
         form.reset();
         setTimeout(() => {
             form.style.display = '';
-        },5000); //Form disappears for 5 seconds.
+
+        },3000); //Form disappears for 3 seconds.
         listAllThoughts();
       });
 });
@@ -66,7 +68,8 @@ function listAllThoughts(){
                 thoughtsElement.appendChild(div);
 
             });
-            loadingElement.style.display = 'none';
+            loadingElement.style.display = '';
 
         });
+
 }

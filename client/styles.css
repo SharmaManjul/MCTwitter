@@ -1,3 +1,127 @@
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: #cdcdcd;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  font-family: 'Oswald', sans-serif;  
+  position: absolute;
+  width: 150px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  border-radius: 10px;
+  
+  background: #b1988193;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 26px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
 img{
     border-radius: 30%;
     height: 81px;
@@ -16,7 +140,8 @@ img{
 }
 
 .button{
-    background-color: #7cadc4;
+    background-color: #5aaacf;
+    color:  rgb(59, 59, 59);
     font-size: 13px;
     font-weight: 800;
     margin-top: 20px;
@@ -26,7 +151,7 @@ img{
 .MC-form{
     font-family: 'Oswald', sans-serif;
     font-size: 25px;
-    color:  rgb(78, 78, 78);
+    color:  rgb(59, 59, 59);
     width: 70%;
     margin: 0 auto;
 }
@@ -60,4 +185,67 @@ img{
 
 .thoughts > div:not(:last-child) {
     margin-bottom: 8px;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -1s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+
+.event{
+  display: flex;
+  font-family: 'Oswald', sans-serif;
+  background:#b19881;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  margin: 25px;
+}
+
+.event > div{
+  padding-left: 40px;
+}
+
+.week{
+  display: flex;
+}
+
+.week > div{
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  background:#b19881;
+  margin: 5px; 
+  padding: 20px;
+  border-radius: 10px;
 }
