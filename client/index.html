@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MC-Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style type="text/css">
+        body{
+            background-image:url(background.png);
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        .bg-image{
+            filter: blur(8px);
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        .inside{
+            background: #b1988193;
+            border-radius: 15px;
+            width: 50%;
+            padding: 50px;
+            margin: 100px auto;
+        }
+
+    </style>
+</head>
+
+<body >  
+    <link href="https://fonts.googleapis.com/css?family=Enriqueta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <div class="inside">
+    <header>
+        
+        <img src="IC.jpg" alt="IC">
+        <img src="BSA.jpg" alt="BSA">
+        <img src="LCSA.jpg" alt="LCSA">
+        <img src="Ind.jpg" alt="Ind">
+        <img src="UMD MSA.jpg" alt="UMDMSA">
+        <img src="ISA.jpg" alt="ISA" width="140" height="170">
+        <img src="KSA.jpg" alt="KSA">
+        <img src="Access  For All.jpg" alt="AFL">
+        <img src="QSA.jpg" alt="QSA">
+        <img src="NSBE.jpg" alt="NSBE">
+        <img src="HLUB.jpg" alt="HLUB">
+        
+        <h1 class="title">MC-Twitter</h1>
+    </header>    
+
+    <main>
+        <form class="MC-form">
+
+            <label for="name">Name:</label>
+            <input class="u-full-width" type="text" id="name" name="name" style="background-color: #c7c7c7; font-family: 'Oswald', sans-serif; font-size: 20px;">
+
+            <label for="content">Thoughts:</label>
+            <textarea class="u-full-width" type="text" id="content" name="content" style="background-color: #c7c7c7; font-family: 'Oswald', sans-serif; font-size: 20px;"></textarea>
+            
+            <button class="button">Send Your Thoughts!</button>
+        </form>
+        <div class="loading">
+            <img src="loading.gif" alt="">
+        </div>
+        <div class="thoughts">
+
+        </div>
+    </main>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+img{
+    border-radius: 30%;
+    height: 81px;
+    width: 81px;
+    
+
+}
+
+.title{
+    color: rgb(92, 63, 40);
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px 2px #686868;
+    font-size: 130px;
+    text-align: center;
+    padding: 30px;
+}
+
+.button{
+    background-color: #7cadc4;
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.MC-form{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    color:  rgb(78, 78, 78);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.loading{
+    text-align: center;
+}
+
+.thoughts{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.thoughts > div{
+    font-family: 'Oswald', sans-serif;
+    background:#b19881;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.thoughts > div > h3 {
+    word-wrap: break-word;
+}
+
+.thoughts > div > p {
+    word-wrap: break-word;
+}
+
+.thoughts > div:not(:last-child) {
+    margin-bottom: 8px;
+}
